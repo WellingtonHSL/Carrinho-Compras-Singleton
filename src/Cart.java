@@ -41,6 +41,7 @@ public class Cart {
             System.out.println("Filmes no carrinho:");
             for (Movie movie : movies) {
                 System.out.println(movie);
+                System.out.println();
             }
             System.out.println();
             System.out.println("Valor Total: R$" + calculateTotal());
