@@ -23,6 +23,6 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Title: " + title + ", Category: " + category + ", Price: R$" + price;
+        return "Título: " + title + "\nCategoria: " + category + "\nPreço: R$" + price + "\n";
     }
 }
