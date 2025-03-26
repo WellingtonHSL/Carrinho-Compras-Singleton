@@ -22,12 +22,18 @@ public class Program {
         Cart cart = Cart.getInstance();
         int choice;
 
+        BE_Facade facade = new BE_Facade();
+
         do {
             System.out.println("\nMenu de opções:");
             System.out.println("1 - Lista de Filmes");
             System.out.println("2 - Ver Carrinho");
             System.out.println("3 - Adicionar Filme ao Carrinho");
             System.out.println("4 - Limpar Carrinho");
+            System.out.println("5 - Facade - imprimir");
+            System.out.println("6 - Facade - retornar inteiro");
+            System.out.println("7 - Facade - cobrar");
+            System.out.println("8 - Facade - realizar pagamento");
             System.out.println("0 - Sair");
             System.out.print("Escolha alguma opção: ");
             choice = scanner.nextInt();
@@ -69,6 +75,19 @@ public class Program {
                     System.out.println("Carrinho limpo!");
                     System.out.println();
                     break;
+                case 5:
+                    facade.imprimir();
+                    break;
+                case 6:
+                    System.out.println(facade.retornarInt());
+                    break;
+                case 7:
+                    System.out.println(facade.cobranca(30.5));;
+                    break;
+                case 8:
+                    System.out.println(facade.fazerPagamento(50.0));
+                    break;
+
                 default:
                     System.out.println("Opção inválida!");
             }
